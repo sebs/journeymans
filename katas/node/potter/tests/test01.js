@@ -26,5 +26,8 @@ describe('Simple discounts', function() {
   });
 	it('Gives discount for 4 different examples', function() {
 	  assert.equal(cart.getPrice(0,1,2,3),8*4*0.8);
-	})
+	})  
+  it('Gives discount for 5 different examples', function() {
+    assert.equal(cart.getPrice(0,1,2,3,4),8*5*0.75);
+  })	
 });
