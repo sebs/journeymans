@@ -11,9 +11,14 @@ describe('Basiscs', function () {
     assert.equal(cart.getPrice(1), 8);	
 	});
   it('should calc 16 for 2 args', function() {
-	  assert.equal(cart.getPrice(1,1), 16);
+	  assert.equal(cart.getPrice(0,0), 16);
 	});
   it('should calc 24 for 3 args', function() {
-	  assert.equal(cart.getPrice(1,1, 1), 24);
+	  assert.equal(cart.getPrice(1,1,1), 24);
+	});
+});
+describe('Simple discounts', function() {
+  it('Gives discount for 2 different examples', function() {
+//	  assert.equal(cart.getPrice(0,1), 8*2*0.95); 
 	});
 });
