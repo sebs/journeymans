@@ -1,7 +1,8 @@
 exports.getPrice = function() {
 	// we build a datastruct where we can pop of the elements and count em
+	// we need this so we can apply multiple
 	var index = this.unique(arguments);
-	var cart = {};
+	var cart = [];
 	for (var i in index) {
 	  cart[index[i]] = [];
 	}
@@ -9,14 +10,29 @@ exports.getPrice = function() {
 	for (var j in arguments) {
 		cart[arguments[j]].push(1);
 	}
-  // now walw over the datastruct and calc stuff
-  var price = 0;
-	for (var k in cart) {
-	  for (var l in cart[k]) {
-	    price += 8;
-		}
+ 
+
+	// create a map of functions in a array to map count to execution 
+	var rebateStrategies = [];
+
+	/*
+	 * We Calculate the pricing strategy for one or 0 books
+	 */
+  var strategyNoAndOneType = function(cart) {
+	  // now walk over the datastruct and calc stuff
+	  var price = 0;
+	  for (var k in cart) {
+	    for (var l in cart[k]) {
+	      price += 8;
+		  }
+	  }
+	  return price;
 	}
-	return price;
+	// we use this when we only have one type in the set
+	rebateStrategies[0] = strategyNoAndOneType(cart);
+	rebateStrategies[1] = strategyNoAndOneType(cart);
+
+	return rebateStrategies[index.length];
 }
 
 exports.unique = function(input) {
