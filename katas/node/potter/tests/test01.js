@@ -31,3 +31,8 @@ describe('Simple discounts', function() {
     assert.equal(cart.getPrice(0,1,2,3,4),8*5*0.75);
   })	
 });
+describe('Several discounts', function() {
+  it('Rebates a set of two and adds the one rest fully', function() {
+//    assert.equal(cart.getPrice(0,0,1), 8 + (8 * 2 * 0.95));	
+	})
+});

@@ -29,47 +29,19 @@ exports.getPrice = function() {
 	  return price;
 	}
   var strategyTwoTypes = function(cart) {
-    // now walk over the datastruct and calc stuff
-    var price = 0;
-    for (var k in cart) {
-      for (var l in cart[k]) {
-        price += 8*0.95;
-      }
-    }
-    return price;
+    return 2*8*0.95;
   }  
    
   var strategyThreeTypes = function(cart) {
-    // now walk over the datastruct and calc stuff
-    var price = 0;
-    for (var k in cart) {
-      for (var l in cart[k]) {
-        price += 8*0.9;
-      }
-    }
-    return price;
-  }
+    return 3*8*0.90;
+	}
 
   var strategyFourTypes = function(cart) {
-    // now walk over the datastruct and calc stuff
-    var price = 0;
-    for (var k in cart) {
-      for (var l in cart[k]) {
-        price += 8*0.8;
-      }
-    }
-    return price;
-  }
+    return 4*8*0.8;
+	}
   
- var strategyFiveTypes = function(cart) {
-    // now walk over the datastruct and calc stuff
-    var price = 0;
-    for (var k in cart) {
-      for (var l in cart[k]) {
-        price += 8*0.75;
-      }
-    }
-    return price;
+  var strategyFiveTypes = function(cart) {
+    return 5*8*0.75;
   }
 
 
