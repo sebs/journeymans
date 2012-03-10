@@ -19,6 +19,9 @@ describe('Basiscs', function () {
 });
 describe('Simple discounts', function() {
   it('Gives discount for 2 different examples', function() {
-    // assert.equal(cart.getPrice(0,1), 8*2*0.95); 
+    assert.equal(cart.getPrice(0,1), 8*2*0.95); 
 	});
+  it('Gives discount for 3 different examples', function() {
+    assert.equal(cart.getPrice(0,1,2), 8*3*0.90);
+  });
 });
