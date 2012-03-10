@@ -49,12 +49,25 @@ exports.getPrice = function() {
     }
     return price;
   }
+
+  var strategyFourTypes = function(cart) {
+    // now walk over the datastruct and calc stuff
+    var price = 0;
+    for (var k in cart) {
+      for (var l in cart[k]) {
+        price += 8*0.8;
+      }
+    }
+    return price;
+  }
+
 	// we use this when we only have one type in the set
 	rebateStrategies[0] = strategyNoAndOneType(cart);
 	rebateStrategies[1] = strategyNoAndOneType(cart);
   rebateStrategies[2] = strategyTwoTypes(cart);
 	rebateStrategies[3] = strategyThreeTypes(cart);
-	return rebateStrategies[index.length];
+  rebateStrategies[4] = strategyFourTypes(cart);
+  return rebateStrategies[index.length];
 }
 
 exports.unique = function(input) {
