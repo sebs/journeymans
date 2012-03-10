@@ -10,7 +10,10 @@ describe('Basiscs', function () {
 	it('should calculate a price for one argument', function() {
     assert.equal(cart.getPrice(1), 8);	
 	});
-  it ('should calc 16 for 2 args', function() {
+  it('should calc 16 for 2 args', function() {
 	  assert.equal(cart.getPrice(1,1), 16);
+	});
+  it('should calc 24 for 3 args', function() {
+	  assert.equal(cart.getPrice(1,1, 1), 24);
 	});
 });
