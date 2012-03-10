@@ -1,6 +1,9 @@
 var assert = require('assert');
 var cart = require('../lib/potter');
 describe('Basiscs', function () {
+  it ('should calc 0 if no args given', function() {
+    assert.equal(cart.getPrice(), 0);
+  });
   it('should should be function', function() { 
 	  assert.ok(typeof cart.getPrice == 'function'); 
 	});
