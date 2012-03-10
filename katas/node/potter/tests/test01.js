@@ -1,4 +1,5 @@
 var assert = require('assert');
-describe('Line', function () {
+var cart = require('../lib/potter');
+describe('Basiscs', function () {
 
 });
