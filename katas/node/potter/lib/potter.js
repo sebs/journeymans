@@ -44,7 +44,7 @@ exports.getPrice = function() {
     return 5*8*0.75;
   }
 	console.log([index.length, arguments.length]);
-	// if (index.length == arguments.length) {
+//	if (index.length == arguments.length) {
 	// we use this when we only have one type in the set
 	rebateStrategies[0] = strategyNoAndOneType(cart);
 	rebateStrategies[1] = strategyNoAndOneType(cart);
@@ -53,7 +53,7 @@ exports.getPrice = function() {
   rebateStrategies[4] = strategyFourTypes(cart);
 	rebateStrategies[5] = strategyFiveTypes(cart);
   return rebateStrategies[index.length];
-// 	}
+	// }
 }
 
 exports.unique = function(input) {
